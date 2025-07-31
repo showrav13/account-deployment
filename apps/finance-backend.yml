@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/showrav-13/account-deployment.git
+    repoURL: https://github.com/showrav13/account-deployment.git
     targetRevision: main
     path: charts/finance-backend
 
