@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: postgresql
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/showrav13/account-deployment.git
+    targetRevision: HEAD
+    path: charts/postgresql
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
